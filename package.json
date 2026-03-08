@@ -2,7 +2,7 @@
   "name": "the-money-flows",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/the-money-flows",
+  "homepage": "https://smiilliin.github.io/the-money-flows/",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
 import Calendar from './Calendar';
 import Categories from './Categories';
 import './App.css';
@@ -62,7 +62,7 @@ function App() {
         <Routes>
           <Route path="/calendar" element={<Calendar categories={categories} actualExpenses={actualExpenses} setActualExpenses={setActualExpenses} estimatedExpenses={estimatedExpenses} setEstimatedExpenses={setEstimatedExpenses} />} />
           <Route path="/categories" element={<Categories categories={categories} setCategories={setCategories} />} />
-          <Route path="/" element={<Calendar categories={categories} actualExpenses={actualExpenses} setActualExpenses={setActualExpenses} estimatedExpenses={estimatedExpenses} setEstimatedExpenses={setEstimatedExpenses} />} />
+          <Route path="/" element={<Navigate to="/calendar" replace />} />
         </Routes>
         <NavBar />
       </div>
